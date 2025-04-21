@@ -1,7 +1,9 @@
-import {Data} from '../db/types/types';
 import {datos} from '../db/fake/fakeService';
 
 export class PlotController {
+    async getData() {
+        return datos[0];
+    }
     async ordenar(numbers: number[]): Promise<number[]> {
         numbers = numbers.sort((a, b) => a - b);
         return numbers;
